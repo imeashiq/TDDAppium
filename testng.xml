@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite parallel="false" name="Suite">
+    <listeners>
+        <listener class-name="com.qa.listeners.TestListener"></listener>
+    </listeners>
+    <test name="Test">
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="deviceName" value="Any Device name"/>
+        <classes>
+            <class name="com.qa.tests.LoginTests">
+                    <methods>
+                        <include name="invalidUserName"/>
+                        <include name="invalidPassword"/>
+                        <include name="successfulLogin"/>
+                    </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
